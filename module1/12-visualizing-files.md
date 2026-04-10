@@ -1,0 +1,194 @@
+# 1.2: 可视化你的工作空间
+
+- **完成时间：** 15-20 分钟
+- **前置条件：** 完成 Module 1.1，对文件系统有基本了解
+
+**在 Claude Code 中开始本模块：** 运行 `/start-1-2` 启动交互式体验。
+
+## 概述
+
+设置一个可视化工作空间，与 Claude Code 并排实时查看项目文件，实现无缝的分屏工作流程。
+
+**关键要点：** 可视化工作空间让你能够观察文件在 Claude 工作时的出现和更新。
+
+## 为什么可视化很重要
+
+在终端中使用 Claude Code 感觉像是在盲人摸象。你让 Claude 创建文档，但你看不到正在发生什么。
+
+**解决方案：** 在终端旁边打开一个可视化编辑器。现在你可以：
+
+- 观察文件在 Claude 创建时出现
+- 在 Claude 工作时阅读文档
+- 验证一切组织正确
+- 始终确切知道正在发生什么
+
+这将 Claude Code 从一个神秘的黑盒转变为一个你可以实时观察和验证的透明工具。
+
+## 选择你的工具
+
+### Obsidian
+
+**最适合：** 想要独立笔记应用的用户
+
+[Obsidian](https://obsidian.md/) 是一个免费、流行的 markdown 编辑器，具有：
+
+- 简洁、无干扰的界面
+- Wikilinks（`[[filename]]`）用于连接笔记
+- 图谱视图可视化笔记连接
+- 庞大的插件生态系统
+
+**限制：**
+
+- 无法显示隐藏文件夹如 `.claude/` - 你需要使用 Finder/Explorer 来查看这些
+- 需要在 2 个工具中工作，Obsidian 用于 markdown 文件编辑，终端用于 Claude Code
+
+**下载：** [https://obsidian.md/download](https://obsidian.md/download)
+
+### VS Code / Cursor
+
+**最适合：** 已经使用这些工具或想要代码编辑功能的用户
+
+- 功能齐全的代码编辑器
+- 可以显示隐藏文件夹
+- 支持 markdown 预览的扩展
+- 对于纯 PM 工作来说比需要的更复杂
+
+## 设置指南
+
+### Obsidian 设置
+
+1. **下载：** 访问 [https://obsidian.md/download](https://obsidian.md/download)（个人使用免费）
+
+2. **打开你的项目：** 选择"将文件夹作为仓库打开"并导航到你的课程文件夹
+
+3. **分屏：** 将 Claude Code 终端和 Obsidian 并排放置
+
+**注意：** 如需要，可以让 Claude 告诉你确切路径：`我的课程文件夹的路径是什么？`
+
+## .claude/ 文件夹
+
+`.claude/` 文件夹包含 agents、commands 和 settings。访问取决于你的工具：
+
+| 工具 | 能看到 .claude/? | 如何访问 |
+|---|---|---|
+| **Obsidian** | 否 | 使用 Finder/Explorer |
+| **VS Code** | 是 | 启用隐藏文件 |
+
+**在 Finder/Explorer 中查看 `.claude/`：**
+
+- **Mac：** 在 Finder 中按 `Cmd + Shift + .` 显示隐藏文件夹
+- **Windows：** 在文件资源管理器的"查看"选项卡中启用"隐藏的项目"
+
+**何时需要：** Module 1.5（Custom Sub-Agents）及后续模块。现在，专注于常规项目文件。
+
+**注意：** Claude Code 始终可以访问 `.claude/` 文件，无论你使用什么编辑器。
+
+## 实时可视化演示
+
+当 Claude 创建或编辑文件时，你会看到它们立即在编辑器中出现。
+
+**试试看：**
+
+1. 用你的项目文件夹打开编辑器
+
+2. 在 Claude Code 中，请求：*创建一个名为 test-visualization.md 的文件，包含一些内容*
+
+3. 观察你的编辑器 - 文件立即出现
+
+4. 点击它阅读 Claude 写的内容
+
+就是这样！无需刷新。文件在 Claude 工作时实时更新。
+
+## 编辑器技巧
+
+### Obsidian 技巧
+
+**基本快捷键：**
+
+- **`Cmd/Ctrl + O`** - 快速切换器（跳转到任何文件）
+- **`Cmd/Ctrl + Shift + F`** - 在所有文件中搜索
+- **`Cmd/Ctrl + E`** - 切换阅读/编辑视图
+
+**Wikilinks：** 使用 `[[filename]]` 语法连接文档，便于导航
+
+**标签：** 使用 `#prd #user-research #q1-2025` 组织和筛选
+
+**保持在阅读视图** 以获得更清晰的格式化显示
+
+### VS Code 技巧
+
+- **`Cmd/Ctrl + P`** - 快速打开任何文件
+- 启用隐藏文件以查看 `.claude/`
+
+## 示例：实时工作流程
+
+**没有可视化：** Claude 创建文件，但你不确定发生了什么或文件在哪里。
+
+**有可视化工作空间：** 观察文件立即出现，点击查看内容，验证组织 - 完全可见和控制。
+
+## 最佳实践
+
+**应该做：**
+
+- 始终使用分屏工作流程
+- 使用快速打开快捷键导航
+- 保持编辑器专注于项目文件夹
+
+**不应该做：**
+
+- 只在全屏终端中工作（你错过了一半的价值）
+- 现在就担心精通编辑器（只需将其用作文件查看器）
+
+## 故障排除
+
+### 我看不到任何文件
+
+**可能原因：** 打开了错误的文件夹
+
+**解决方法：**
+
+1. 问 Claude：`我的课程文件夹的路径是什么？`
+
+2. 在编辑器中重新打开那个确切的文件夹
+
+3. 你的文件现在应该出现了
+
+**常见错误：** 打开了父文件夹而不是项目文件夹本身
+
+**示例：**
+
+- 错误：`/Users/yourname/Documents`（层级太高）
+- 正确：`/Users/yourname/Documents/claude-code-pm-course`
+
+### 文件没有更新
+
+**可能原因：** 编辑器需要检测变化
+
+**解决方法：**
+
+1. 点击编辑器窗口外部再回来（强制刷新）
+
+2. 或者：关闭并重新打开特定文件
+
+3. 或者：重启编辑器（很少需要，但有效）
+
+### 我看到原始 markdown 而不是格式化文本
+
+**对于 Obsidian：** 按 `Cmd/Ctrl + E` 切换到阅读视图，或点击书本图标
+
+### .claude/ 文件夹在哪里？
+
+**Obsidian：** 设计上隐藏。使用 Finder/Explorer：
+
+- **Mac：** 打开 Finder → 导航到项目 → 按 `Cmd + Shift + .`
+- **Windows：** 打开文件资源管理器 → 导航到项目 → 查看选项卡 → 勾选"隐藏的项目"
+
+---
+
+**关于本课程**
+
+由 [Carl Vellotti](https://www.linkedin.com/in/carlvellotti/) 创建。如果你对本模块或整个课程有任何反馈，请给我留言！我正在为 PM 构建者建立一个新闻通讯和社区，请查看 [The Full Stack PM](https://fullstackpm.com/subscribe?utm_source=ccforpms&utm_medium=course&utm_campaign=visualizing-files)。
+
+**源代码仓库：** [github.com/carlvellotti/claude-code-pm-course](https://github.com/carlvellotti/claude-code-pm-course)
+
+[1.1: Welcome](https://ccforpms.com/fundamentals/welcome) | [1.3: First Tasks](https://ccforpms.com/fundamentals/first-tasks)
