@@ -213,4 +213,6 @@ sudo curl -fsSL https://claude.ai/install.sh | bash
 
 **源仓库：** [github.com/carlvellotti/claude-code-pm-course](https://github.com/carlvellotti/claude-code-pm-course)
 
-[0.0: 课程介绍](https://ccforpms.com/getting-started/introduction) [0.2: 下载与开始](https://ccforpms.com/getting-started/start-and-clone)
+[0.0: 课程介绍](https://ccforpms.com/getting-started/introduction) 
+
+[0.2: 下载与开始]([https://ccforpms.com/getting-started/start-and-clone](https://github.com/STRUGGLE1999/claude-code-pm-course-cn/blob/main/module0/02-start-and-clone.md))
